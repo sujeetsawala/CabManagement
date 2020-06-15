@@ -61,11 +61,11 @@ public class ClientHandler implements Runnable {
                     case "7": {
                         List<TravelInfo> cabTravelInfos = cabManagementController.getCabTravelInfo(request[1]);
                         for(TravelInfo travelInfo: cabTravelInfos) {
-                            System.out.println(travelInfo.getCabId());
-                            System.out.println(travelInfo.getStartCity());
-                            System.out.println(travelInfo.getDestinationCity());
-                            System.out.println(travelInfo.getStartTimestamp());
-                            System.out.println(travelInfo.getEndTimestamp());
+                            System.out.println("CabId: " + travelInfo.getCabId());
+                            System.out.println("StartCity: " + travelInfo.getStartCity());
+                            System.out.println("DestinationCity:" + travelInfo.getDestinationCity());
+                            System.out.println("StartTimestamp:" + travelInfo.getStartTimestamp());
+                            System.out.println("EndTimeStamp: " + travelInfo.getEndTimestamp());
                             System.out.println();
                         }
                         out.println("Cab Travel Info successful");
