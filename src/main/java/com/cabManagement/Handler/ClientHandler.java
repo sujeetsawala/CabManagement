@@ -44,7 +44,7 @@ public class ClientHandler implements Runnable {
                         break;
                     }
                     case "4": {
-                        Boolean result = cabManagementController.onboardCities(request[1], request[2]);
+                        Boolean result = cabManagementController.onboardCity(request[1], request[2]);
                         out.println("City Onboarded: " + result);
                         break;
                     }

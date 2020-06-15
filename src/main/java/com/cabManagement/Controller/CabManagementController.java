@@ -64,7 +64,7 @@ public class CabManagementController {
         return this.cabService.updateCabLocation(cabId, cityId);
     }
 
-    public Boolean onboardCities(String cityId, String cityName ) {
+    public Boolean onboardCity(String cityId, String cityName ) {
         City city = new City(cityId, cityName);
         return this.cityService.addCity(city);
     }
