@@ -25,8 +25,8 @@ public class Client {
                     System.out.println("3. Register a cab");
                     System.out.println("4. Onboard a city");
                     System.out.println("5. Change cab current city");
-                    System.out.println("6. Get Cab Info");
-                    System.out.println("7. Get cab idle Time");
+                    System.out.println("6. Get Cab idle Time");
+                    System.out.println("7. Get Cab Info");
 
 
                     /**

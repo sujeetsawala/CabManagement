@@ -28,7 +28,7 @@ public class CabService {
     }
 
     public synchronized void addCab(Cab cab) {
-       if(!cabs.containsKey(cab.getCabId())) {
+       if(!cabs.containsKey(cab.getCabId()) && this.cityService.getCity(cab.getCurrentCityId()) != null) {
            cabs.put(cab.getCabId(), cab);
            cabIds.add(cab.getCabId());
        }
@@ -91,10 +91,10 @@ public class CabService {
         cab.setLastTripEndTimestamp(timeStamp);
         cabs.put(cabId, cab);
         this.analyticsService.addEndtimestamp(cabId, new Date().getTime());
-        System.out.println(cab.getCabId());
-        System.out.println(cab.getCabState());
-        System.out.println(cab.getCurrentCityId());
-        System.out.println(cab.getDestinationCityId());
-        System.out.println(cab.getLastTripEndTimestamp());
+//        System.out.println(cab.getCabId());
+//        System.out.println(cab.getCabState());
+//        System.out.println(cab.getCurrentCityId());
+//        System.out.println(cab.getDestinationCityId());
+//        System.out.println(cab.getLastTripEndTimestamp());
     }
 }
