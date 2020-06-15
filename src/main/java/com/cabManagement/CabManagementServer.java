@@ -19,7 +19,7 @@ public class CabManagementServer {
         try {
             Injector injector = Guice.createInjector();
             CabManagementController cabManagementController = injector.getInstance(CabManagementController.class);
-            cabManagementController.init();
+            // cabManagementController.init();
 
             ServerSocket serverSocket = new ServerSocket(PORT);
             System.out.println("Server started.\nListening for connections on port : " + PORT + " ...\n");

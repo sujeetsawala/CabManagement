@@ -55,9 +55,9 @@ public class CabManagementController {
 
     }
 
-    public void registerCab(String cabId, String cityId) {
+    public Boolean registerCab(String cabId, String cityId) {
         Cab cab = new Cab(cabId, cityId);
-        this.cabService.addCab(cab);
+        return this.cabService.addCab(cab);
     }
 
     public Boolean changeCabCurrentCity(String cabId, String cityId) {

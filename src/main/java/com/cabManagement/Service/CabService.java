@@ -27,11 +27,13 @@ public class CabService {
         this.cityService = cityService;
     }
 
-    public synchronized void addCab(Cab cab) {
+    public synchronized Boolean addCab(Cab cab) {
        if(!cabs.containsKey(cab.getCabId()) && this.cityService.getCity(cab.getCurrentCityId()) != null) {
            cabs.put(cab.getCabId(), cab);
            cabIds.add(cab.getCabId());
+           return true;
        }
+       return false;
     }
 
     public Cab getCab(String cabId) {

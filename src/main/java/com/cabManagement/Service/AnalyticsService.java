@@ -44,7 +44,7 @@ public class AnalyticsService {
             for(TravelInfo travelInfo : cabTravelInfos) {
                 if(travelInfo.getEndTimestamp() < startTimestamp || travelInfo.getStartTimestamp() > endTimestamp)
                     continue;
-                Long difference = Math.min(travelInfo.getEndTimestamp(), endTimestamp) - Math.max(travelInfo.getStartTimestamp(), startTimestamp) + 1;
+                Long difference = Math.min(travelInfo.getEndTimestamp() != null ? travelInfo.getEndTimestamp() : endTimestamp, endTimestamp) - Math.max(travelInfo.getStartTimestamp(), startTimestamp) + 1;
                 idleTimeAmount -= difference;
             }
             return idleTimeAmount;

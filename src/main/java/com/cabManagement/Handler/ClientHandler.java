@@ -30,7 +30,10 @@ public class ClientHandler implements Runnable {
                 switch (request[0]) {
                     case "1": {
                         String result = cabManagementController.bookCab(request[1], request[2]);
-                        out.println("Cab booked with cabId: " + result);
+                        if(result != null)
+                            out.println("Cab booked with cabId: " + result);
+                        else
+                            out.println("Unable to book the cab");
                         break;
                     }
                     case "2": {
@@ -39,8 +42,11 @@ public class ClientHandler implements Runnable {
                         break;
                     }
                     case "3": {
-                        cabManagementController.registerCab(request[1], request[2]);
-                        out.println("Cab registered");
+                        Boolean result = cabManagementController.registerCab(request[1], request[2]);
+                        if(result)
+                            out.println("Cab registered");
+                        else
+                            out.println("Unable to register the cab");
                         break;
                     }
                     case "4": {
