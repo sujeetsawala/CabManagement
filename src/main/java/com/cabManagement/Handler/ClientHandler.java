@@ -54,7 +54,7 @@ public class ClientHandler implements Runnable {
                         break;
                     }
                     case "6": {
-                        Long idleTime = cabManagementController.getCabIdle(request[1], parseLong(request[2]), parseLong(request[3]));
+                        Long idleTime = cabManagementController.getCabIdleTime(request[1], parseLong(request[2]), parseLong(request[3]));
                         out.println("Idle Time: " + idleTime);
                         break;
                     }

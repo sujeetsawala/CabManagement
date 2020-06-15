@@ -37,7 +37,7 @@ public class AnalyticsService {
         return new ArrayList<>();
     }
 
-    public Long getCabIdle(String cabId, Long startTimestamp, Long endTimestamp) {
+    public Long getCabIdleTime(String cabId, Long startTimestamp, Long endTimestamp) {
         if(travelInfoMap.containsKey(cabId)) {
             List<TravelInfo> cabTravelInfos = travelInfoMap.get(cabId);
             Long idleTimeAmount = endTimestamp - startTimestamp + 1;

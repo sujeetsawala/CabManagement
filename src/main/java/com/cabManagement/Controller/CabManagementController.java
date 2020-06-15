@@ -82,7 +82,7 @@ public class CabManagementController {
        return this.analyticsService.getCabTravelInfo(cabId);
     }
 
-    public Long getCabIdle(String cabId, Long startTimestamp, Long endTimestamp) {
-        return this.analyticsService.getCabIdle(cabId, startTimestamp, endTimestamp);
+    public Long getCabIdleTime(String cabId, Long startTimestamp, Long endTimestamp) {
+        return this.analyticsService.getCabIdleTime(cabId, startTimestamp, endTimestamp);
     }
 }
